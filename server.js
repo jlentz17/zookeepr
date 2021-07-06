@@ -68,18 +68,19 @@ function createNewAnimal(body, animalsArray) {
 }
 
 function validateAnimal(animal) {
-    if (!animal.name || animal.name !== "string") {
+    if (!animal.name || typeof animal.name !== "string") {
         return false;
     }
-    if (!animal.species || animal.species !== "string") {
+    if (!animal.species || typeof animal.species !== "string") {
         return false;
     }
-    if (!animal.diet || animal.diet !== "string") {
+    if (!animal.diet || typeof animal.diet !== "string") {
         return false;
     }
     if (!animal.personailtyTraits || !Array.isArray(animal.personalityTraits)) {
         return false;
     }
+    return true;
 }
 
 app.get("/api/animals", (req, res) => {
