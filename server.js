@@ -34,8 +34,8 @@ function filterByQuery(query, animalsArray) {
     if (query.diet) {
         filteredResults = filteredResults.filter(animal => animal.diet === query.diet);
     }
-    if ( query.species) {
-        filteredResults= filteredResults.filter(animal => animal.species === query.species);
+    if (query.species) {
+        filteredResults = filteredResults.filter(animal => animal.species === query.species);
     }
     if (query.name) {
         filteredResults = filteredResults.filter(animal => animal.name === query.name);
@@ -64,6 +64,13 @@ app.get("/api/animals/:id", (req, res) => {
         res.send(404);
     }   
 })
+
+app.post("/api/animals", (req, res) => {
+    // req.body is where our incoming content will be
+    console.log(req.body);
+    res.json(req.body);
+});
+
 app.listen(PORT, () => {
     console.log(`API server now on port ${PORT}!`)
 });
