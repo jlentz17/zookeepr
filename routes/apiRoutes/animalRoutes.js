@@ -19,10 +19,11 @@ router.get('/animals/:id', (req, res) => {
   }
 });
 
-router.post('/animals', (req, res) => {
+router.post('/api/animals', (req, res) => {
   // set id based on what the next index of the array will be
+  console.log("post")
   req.body.id = animals.length.toString();
-
+  console.log(req)
   if (!validateAnimal(req.body)) {
     res.status(400).send('The animal is not properly formatted.');
   } else {
