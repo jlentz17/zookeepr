@@ -32,7 +32,7 @@ requires download of node.js, npm, and Express
     >  - enter View Animals or View Zookers to view stored information 
     >  - Filter your search by diet or personality traits 
 
-![preview](preview.png)
+![preview](zookeepr.png)
 ## Contributions
 Jeremy Lentz, UofA Bootcamp lesson project 
 
